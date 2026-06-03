@@ -5,6 +5,11 @@ public class UserData {
 	private String email;
 	private String phone;
 	private String pwd;
+	
+//	@Override
+//	public String toString() {
+//		return "User [username=" + username + ", email=" + email + ", phone=" + phone + ", pwd=" + pwd + "]";
+//	}
 	public String getUsername() {
 		return username;
 	}
