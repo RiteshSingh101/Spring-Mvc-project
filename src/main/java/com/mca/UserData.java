@@ -6,10 +6,16 @@ public class UserData {
 	private String phone;
 	private String pwd;
 	
-//	@Override
-//	public String toString() {
-//		return "User [username=" + username + ", email=" + email + ", phone=" + phone + ", pwd=" + pwd + "]";
-//	}
+	public UserData(String username, String email, String phone, String pwd) {
+		this.username = username;
+		this.email = email;
+		this.phone = phone;
+		this.pwd = pwd;
+	}
+	@Override
+	public String toString() {
+		return "User [username=" + username + ", email=" + email + ", phone=" + phone + ", pwd=" + pwd + "]";
+	}
 	public String getUsername() {
 		return username;
 	}
