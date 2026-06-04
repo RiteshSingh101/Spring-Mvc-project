@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 
 //import jakarta.servlet.http.HttpServletRequest;
@@ -48,5 +49,25 @@ public class TestConroller {
 		model.addAttribute("age",age);
 		model.addAttribute("user",user);
 		return "display.jsp";
+	}
+	
+	@RequestMapping(value = "send")
+	public ModelAndView sendDataUsingMV() {
+		System.out.println("Send");
+		
+		String personName = "Hritek";
+		int age = 25;
+		
+		UserData user = new UserData("Hritek","hritek@gmail.com","123131","");
+		
+		ModelAndView mv = new ModelAndView("display.jsp");
+		
+		mv.addObject("name",personName);
+		mv.addObject("age",age);
+		mv.addObject("user",user);
+		
+//		mv.setViewName("display.jsp");
+		
+		return mv;
 	}
 }
